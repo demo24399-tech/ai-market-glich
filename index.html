@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI MARKET GLICH</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:#101323;color:white;font-family:Arial,sans-serif}
+.header{text-align:center;padding:20px 5px}
+.header h1{font-size:27px;color:#00f5d4;margin:0 0 8px}
+.header p{color:#b8c0dc}
+.card{background:#1b2038;border:1px solid #343b5e;border-radius:18px;padding:18px;margin:15px 0}
+h2{font-size:19px;margin-top:0}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{border:0;border-radius:13px;padding:17px 8px;font-size:15px;font-weight:bold;color:white;cursor:pointer}
+.b1{background:linear-gradient(135deg,#6c4dff,#a34dff)}
+.b2{background:linear-gradient(135deg,#00a6fb,#00d4ff);color:#07152b}
+.b3{background:linear-gradient(135deg,#00b894,#55efc4);color:#062b25}
+.b4{background:linear-gradient(135deg,#ff7b00,#ffb142)}
+.b5{background:linear-gradient(135deg,#e84393,#fd79a8)}
+.b6{background:linear-gradient(135deg,#d63031,#ff7675)}
+.status{text-align:center;color:#c8cee8;font-size:13px;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>⚡ AI MARKET GLICH</h1>
+<p>Welcome to our official dashboard</p>
+</div>
+<div class="card">
+<h2>🚀 Main Menu</h2>
+<div class="buttons">
+<button class="b1" onclick="showMessage('Like')">❤️ Like</button>
+<button class="b2" onclick="showMessage('Automatic')">⚙️ Automatic</button>
+<button class="b3" onclick="showMessage('Profile')">👤 My Profile</button>
+<button class="b4" onclick="showMessage('Support')">🎧 Support</button>
+<button class="b5" onclick="showMessage('Referral')">🎁 Referral</button>
+<button class="b6" onclick="showMessage('Help')">📚 Help</button>
+</div>
+</div>
+<div class="status" id="status">✨ AI MARKET GLICH • Online</div>
+<script>
+const tg=window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+function showMessage(name){
+document.getElementById('status').textContent='Selected: '+name;
+tg.showAlert(name+' button selected');
+}
+</script>
+</body>
+</html>
